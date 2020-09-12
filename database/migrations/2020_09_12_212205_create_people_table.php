@@ -18,7 +18,7 @@ class CreatePeopleTable extends Migration
             $table->string('name',45);
             $table->string('last_name',45);
             $table->string('email');
-            //$table->string('password');
+            $table->string('password');
             $table->timestamps();
         });
     }
