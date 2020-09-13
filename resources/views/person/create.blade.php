@@ -11,7 +11,7 @@
                     <h1>Create person</h1>
                 </div>
                 <div class="col-12">
-                    <form action="{{ action('PersonController@store') }}">
+                    <form class="needs-validation" action="{{ action('PersonController@store') }}" method="POST">
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-12 col-md-6">
@@ -38,15 +38,8 @@
                             </div>
                         </div>
 
+                    </form>
                 </div>
-
-
-
             </div>
-            </form>
-        </div>
-    </div>
-    </div>
-    </div>
 
-@endsection
+        @endsection

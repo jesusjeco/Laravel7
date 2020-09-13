@@ -36,7 +36,11 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate(Person::$rules, Person::$messages);
+        Person::create($request->all()); //creado
+
+        return view('person.index');
     }
 
     /**

@@ -12,7 +12,7 @@ class Person extends Model
         'name' => 'required|alpha',
         'last_name' => 'alpha',
         'email' => 'required|email',
-        'password' => 'required|text',
+        'password' => 'required',
     ];
 
     /** Messages
