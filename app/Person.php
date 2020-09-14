@@ -11,7 +11,7 @@ class Person extends Model
     public static $rules = [
         'name' => 'required|alpha',
         'last_name' => 'alpha',
-        'email' => 'required|email',
+        'email' => 'required|email|unique:people',
         'password' => 'required',
     ];
 
@@ -23,6 +23,7 @@ class Person extends Model
         'last_name.alpha' => 'Last name must not have numbers',
         'email.required' => 'Email is required',
         'email.email' => 'Email format invalid',
+        'email.unique' => 'Email already exist',
         'password' => 'Password is required'
     ];
 

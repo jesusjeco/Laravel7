@@ -36,9 +36,12 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-
-        $request->validate(Person::$rules, Person::$messages);
-        Person::create($request->all()); //creado
+        $validData = $request->validate(Person::$rules, Person::$messages);
+        if($validData) {
+            Person::create($request->all()); //creado
+            session()->flash('status','The user was succesfully created');
+            return view('person.index');
+        }
 
         return view('person.index');
     }

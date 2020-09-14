@@ -18,3 +18,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('person', 'PersonController');
+Route::get('person/create', function () {
+    return view('person.create');
+})->name('personCreate');

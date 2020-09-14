@@ -10,6 +10,7 @@
     <title>@yield('name')</title>
 </head>
 <body>
+    <header>@include('templates.main-menu')</header>
 
     @yield('body')
 
